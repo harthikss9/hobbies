@@ -51,7 +51,7 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-        child: Padding(
+        child: SingleChildScrollView(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -127,32 +127,30 @@ class LoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               OutlinedButton.icon(
-  onPressed: () => _signInWithGoogle(context), // Your Google Sign-In function
-  icon: Image.asset(
-    'assets/google_icon.png',
-    height: 20, // Adjust the size of the icon
-    width: 20,
-  ),
-  label: const Text(
-    'Log In with Google',
-    style: TextStyle(
-      color: Colors.black,
-      fontWeight: FontWeight.w500, // Medium weight for a balanced look
-      fontSize: 16, // Adjust font size
-    ),
-  ),
-  style: OutlinedButton.styleFrom(
-    backgroundColor: Colors.white, // White background
-    fixedSize: const Size(240, 50), // Adjust the button size
-    side: BorderSide(color: Colors.grey.shade300), // Subtle border
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(8),
-    ),
-    padding: const EdgeInsets.symmetric(horizontal: 12.0), // Inner padding
-  ),
-),
-
-
+                onPressed: () => _signInWithGoogle(context), // Your Google Sign-In function
+                icon: Image.asset(
+                  'assets/google_icon.png',
+                  height: 20, // Adjust the size of the icon
+                  width: 20,
+                ),
+                label: const Text(
+                  'Log In with Google',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500, // Medium weight for a balanced look
+                    fontSize: 16, // Adjust font size
+                  ),
+                ),
+                style: OutlinedButton.styleFrom(
+                  backgroundColor: Colors.white, // White background
+                  fixedSize: const Size(240, 50), // Adjust the button size
+                  side: BorderSide(color: Colors.grey.shade300), // Subtle border
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 12.0), // Inner padding
+                ),
+              ),
               const SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
